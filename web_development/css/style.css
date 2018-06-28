@@ -1,0 +1,57 @@
+/*Selector {
+  Property: value;
+}*/
+*{
+  text-align: right;
+}
+
+body{
+  background-image: url(background.jpg);
+  background-size: cover;
+}
+
+p{
+  color: #5CDF0F;
+  text-align: center;
+  border: 5px solid rgba(30,80,0,.25);
+  cursor: pointer;
+}
+
+img{
+    float:right;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+}
+
+p{
+  /*
+  text-decoration: underline;
+  text-decoration: line-through;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 120%;
+  */
+  font-family: "Comic Sans", Georgia;
+}
+
+p{
+  color: green;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+.webtext{
+  border: 5px dashed green;
+}
+
+#div1{
+  background: rgba(0,0,255,0.2);
+}

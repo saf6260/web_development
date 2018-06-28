@@ -1,0 +1,21 @@
+h2{
+  color: blue;
+}
+
+.boxmodel{
+    border: 5px solid red;
+    display: inline-block;
+    padding: 5px 20px 5px 20px; /*Top, Right, bottom, left */
+    margin: 0px 20px; /*Shortcut for top, right, bottom, left */
+    width: 33px;
+    height: 55px;
+}
+
+p{
+    font-size:20px;
+}
+
+span{
+    font-size:3em;  /*Based on items around (will change with text size) */
+    font-size:5rem; /*Based on root element (in this case the html) */
+}

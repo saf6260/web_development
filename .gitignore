@@ -2,3 +2,6 @@ web_development/node_modules/*
 
 web_development/package.json
 web_development/package-lock.json
+
+web_development/Node/Public
+web_development/Node/node_modules

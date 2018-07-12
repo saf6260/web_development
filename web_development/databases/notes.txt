@@ -1,0 +1,71 @@
+Logging in to use postgres
+    sudo -i -u postgres
+    psql 'table name here'
+
+Creating Tables
+    CREATE TABLE table_name (column_1 datatype, column_2 datatype, column_3 datatype);
+        The datatypes can be strings, numbers, or dates
+        Optimized to make sure easy communication between tables can occur
+        \d shows list of relations after creating a table
+        Should only have to create once
+
+    CREATE TABLE table_name (column_1 datatype modifyer, column_2 datatype modifyer, column_3 datatype modifyer);
+        Useful Modifyers:
+            NOT NULL -> cannot be blank in a table
+            PRIMARY KEY -> Access when looking for something (one per table)
+            UNIQUE -> must be a unique element
+
+Inserting into tables
+    INSERT INTO table_name (column_1, column_2, column_3) VALUES (value_1, 'value_2', value_3);
+
+Selecting items in the table
+    SELECT value_1, value_2, value_3 FROM table_name;
+        Grabs specified table rows and their entries
+
+    SELECT * FROM table_name;
+        Grabs all data for the specified table
+
+Updating tables once they have been created
+    ALTER TABLE table_name ADD column datatype; 
+        adds a column to a preexisting table
+
+    UPDATE table_name SET some_column = some_value WHERE some_column = some_value;
+        updates a part of a table where the value being updated and the column is specified
+
+Grabbing users
+    SELECT * FROM users WHERE name LIKE 'A%';
+        grabs all users from the table where their name starts with an A
+        The % symbol means 0, one, or multiple characters can follow
+        The LIKE command looks for a specified pattern 
+        When preforming searches, case matters
+
+Sorting based on a value
+    SELECT * FROM users ORDER BY column_name modifyer;
+        The modifyer can be DESC for descending or ASC for ascending values
+        ORDER BY returns a table where the specified column has been orderd by the spefified modifyer
+
+Functions
+    SELECT AVG(column_name) FROM table_name;
+        Calculates the average value for a specific column in the specified table
+
+    SELECT SUM(column_name) FROM table_name;
+        Calculates the sum for a specified column in the specified table
+
+    SELECT COUNT(name) FROM table_name;
+        Calculates the number of entries in a column in the specified table
+
+Joining Tables
+    SELECT * FROM table_1_name JOIN table_2_name ON table_name.col_name = table_2_name.col_name;
+        col_names must match for the connection to occur
+
+Deleteing entries in a table
+    DELETE FROM table_name WHERE col_name = item to delete;
+
+Deleting Tables
+    DROP TABLE table_name;
+
+Extra Commands
+    AND
+        can be added to ensure two values must exist in a row for a value to be changed
+    OR
+        can be added to add to multiple users at the same time

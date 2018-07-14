@@ -11,3 +11,7 @@ enjoy the learning style and content available).
 
 Thank you again for visiting and you can see my later applications of everything I learned at www.scottalexf.com
 (my website and summer project of summer 2018).
+
+For "The Complete Web Developer in 2018: Zero to Mastery" by Andrei Neagoie, there was a large project to finish
+off the course involving face recognition and will be hosted by Heroku soon. The link will be posted here as soon
+as it is hosted successfully.

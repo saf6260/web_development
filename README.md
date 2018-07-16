@@ -13,5 +13,7 @@ Thank you again for visiting and you can see my later applications of everything
 (my website and summer project of summer 2018).
 
 For "The Complete Web Developer in 2018: Zero to Mastery" by Andrei Neagoie, there was a large project to finish
-off the course involving face recognition and will be hosted by Heroku soon. The link will be posted here as soon
-as it is hosted successfully.
+off the course involving face recognition and is now hosted on Heroku. Visit 
+https://smart-brain-saf.herokuapp.com/ to see the app working and also check out the following repositories to see
+their code development separate from this large repository: 1) For front end: 
+https://github.com/saf6260/smartbrain-front 2) For back end: https://github.com/saf6260/smartbrain

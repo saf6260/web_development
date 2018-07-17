@@ -1,0 +1,30 @@
+Connections: 
+ssh {user}@{host}
+
+3 Techniques of SSH:
+    1.Symmetrical Encryption
+        a.Uses one secret key between both parties
+        b.Key could be stolen, and used to encript messages being passed between users
+        c.Key exchange algorithm used to independently calculate the key for the system
+        d.Key is specific for each ssh connection
+    2.Asymmetrical Encryption
+        a.A message being encripted by a public key can only be decripted by the same systems
+            private key
+        b.Public keys can only encript data and private keys are the only thing that the can 
+            decript public key messages
+        c.SSH works by using asymmetrical encription to generate temporary private and public
+            keys, and then sends eachother the public key for use during the connection. 
+            From there, symmetrical encription is used to pass data between connections.
+        d.Difiie Hellman key exchange passes the keys to one another
+    3.Hashing
+        a.Never meant to decript anything
+        b.One way
+        c.Verifies messages between systems to ensure the system you are trying to communicate
+            to is the one responding.
+        d.Completed thru HMAC- hash based max authentication codes. Using a hash function,
+            each message must contain a MAC in order to make sure the hashes match on either
+            side of the connection. If not, the message has been tampered with
+
+1 more security measure:
+    1.Authenticate User
+        a.Password prompts occur to ensure only specific people are connected 

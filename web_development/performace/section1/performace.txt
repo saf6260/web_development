@@ -1,0 +1,43 @@
+Transfer and Critical Render Path Notes:
+    Network Performace:
+        1.Honey I shrunk the files:
+            a.Minimize Text
+                i.Take code that you have and put it thru UglifyJs(removes whitespace and cleans up space)
+            b.Minimize Images 
+                i.Change file format that works best for the job
+                ii.Jpg:
+                    a.multi-color images that are large in file size
+                    b.Doesn't work well with transparancy 
+                iii.GIF:
+                    a.Limit color count that saves file size
+                iv.PNG:
+                    a.Limit color as well to bring down file size
+                    b.Often used for logos
+                    c.Transparancy can be added
+                v.SVG:
+                    a.Vector graphics
+                    b.Incredibly small
+                    c.Good for retna and 4k displays
+                    d.Simplistic, lack colors
+                vi.Compress as much as possible, and pick correct type.
+                vii.When to use each type:
+                    a.If you want transparancy: use a PNG
+                    b.If you want animations:  use a GIF
+                    c.If you want colorful images: use a JPG
+                    d.If you want simple icons, logos, illustrations: use SVGs
+                    e.Reduce PNG with TinyPNG
+                    f.Reduce JPG with JPEG-optimizer
+                    g.Try to choose simple illustractions over highly detailed photographs
+                    h.Always lower JPEG image quality (30-60%)
+                    i.Resize images based on size it will be displayed
+                    j.Display different sized images for different backgrounds
+                        1.Do this with media queries: 
+                        2.Ex:
+                            i@media screen and (width size) {}
+                    k.Use CNDs linke imigx
+                    l.Remove image metadata
+        2.The traveling deliveryman:
+            a.Less trips
+                i.Minimize libraries needed/used
+                ii.Browsers have set limits on files downloaded at once
+

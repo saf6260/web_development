@@ -28,3 +28,15 @@ ssh {user}@{host}
 1 more security measure:
     1.Authenticate User
         a.Password prompts occur to ensure only specific people are connected 
+
+.ssh folder:
+    Generating a public and private key:
+        a.ssh-keygen -C (-C = comment) then enter file location
+        b. .pub key can be shared with anyone, other file do not share
+    Sharing key with a server:
+        a. pbcopy <~/.ssh/keyname.pub (copy key to clipboard)
+        b. ssh into server
+        c. Either create file or add to file named: authorized_keys
+        d. paste key into file
+        e. Use command 'ssh-add ~/.ssh/keyname' to add ssh key to ssh connection
+        f. SSH is setup and ready for use

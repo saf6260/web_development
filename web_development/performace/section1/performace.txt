@@ -40,4 +40,33 @@ Transfer and Critical Render Path Notes:
             a.Less trips
                 i.Minimize libraries needed/used
                 ii.Browsers have set limits on files downloaded at once
+    Critical Render Path:
+        1.Path structure:
+            a.DOM (HTML Files) -> CSSOM (CSS Files) -> RENDER Tree (JS Files) -> Layout ->Paint
+        2.Optimizing HTML file control:
+            a.Put CSS first so it can be downloaded faster (get it done as soon as possible)
+            b.JS files at the bottom so all content is downloaded before the script is read
+                i.Script can block rendering of the page if alerts or other actions occur
+            c.Load style tags as fast as possible so render tree can be constructed 
+        3.Optimizing CSS:
+            a.CSS is render blocking
+            b.Make as light weight as possible
+            c.Only load whatever is needed, above the fold loading, lower specificity, and add media attributes
+                i.Above the fold loading: Only load what is visibly seen by the user
+                    1.<script type='text/javascript' const loadStyleSheet = src => {
+                        if(document.createStylesheet){
+                            document.createStylesheet(src)
+                        } else{
+                            const stylesheet = document.createElement('link');
+                            stylesheet.href = src;
+                            stylesheet.type = 'text/css';
+                            stylesheet.rel = 'stylesheet';
+                            document.getElementsByTagName('head')[0].appendChild(stylesheet);
+                        }
+                        window.onload = function() {
+                            console.log('window done!');
+                            loadStyleSheet(file_name);
+                        }
+                      </script
+                ii.<link rel='stylesheet' href='file_name.css' media='only screen and (min-width: 500px)'> 
 

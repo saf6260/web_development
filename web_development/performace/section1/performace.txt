@@ -69,4 +69,19 @@ Transfer and Critical Render Path Notes:
                         }
                       </script
                 ii.<link rel='stylesheet' href='file_name.css' media='only screen and (min-width: 500px)'> 
-
+                iii.Less specificity: limit the amount of extra tags placed on top of css so it takes less time to calculate 
+                iv.Internal Style Sheets -> only loads what is needed for the page type and stops us from having to require another new page (use with above the fold) 
+                v.Inline css -> takes care of the html line at the specific time
+        4.Optimizing JS:
+            a.Load Scripts asynchronously, Defer loading to scripts, minimize DOM manipulation, avoid long running js
+            b.Load scripts asynchronously: 
+                i.<script async> 
+                ii.loads scripts asynchronously rather than one long wait 
+                iii.Can have issues if something loads before page renders
+                iv.Only add to things that dont affect the DOM (trackers)
+            c.Loading scripts after html has been parsed:
+                i.<script defer>
+                ii.Downloads in background but doesn't execute til HTML has loaded fully
+                iii.Saves issues if script is needed for DOM manipulation
+                iv.Only use on things that aren't super important, but still affect the DOM after the fold
+        
